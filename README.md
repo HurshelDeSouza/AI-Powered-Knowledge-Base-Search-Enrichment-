@@ -1,116 +1,116 @@
 # AI-Powered Knowledge Base Search & Enrichment
 
-Un sistema inteligente que permite a los usuarios subir múltiples documentos, buscar en lenguaje natural, obtener respuestas generadas por IA, y recibir sugerencias para enriquecer la base de conocimiento.
+An intelligent system that allows users to upload multiple documents, perform natural language searches, receive AI-generated answers, and get suggestions to enrich the knowledge base.
 
-## 🚀 **Características Principales**
+## 🚀 **Key Features**
 
-- **📁 Carga de Documentos**: Subida múltiple de archivos con drag & drop
-- **🔍 Búsqueda Inteligente**: Búsqueda en lenguaje natural en todos los documentos
-- **🤖 Respuestas de IA**: Generación de respuestas usando Google Gemini AI
-- **✅ Verificación de Completitud**: Análisis automático de la calidad de las respuestas
-- **💡 Sugerencias de Enriquecimiento**: Recomendaciones para mejorar la base de conocimiento
-- **📊 Indicador Visual**: Sistema de confianza visual (semáforo)
+- **📁 Document Upload**: Multiple file upload with drag & drop
+- **🔍 Intelligent Search**: Natural language search across all documents
+- **🤖 AI Responses**: Answer generation using Google Gemini AI
+- **✅ Completeness Verification**: Automatic analysis of answer quality
+- **💡 Enrichment Suggestions**: Recommendations to improve the knowledge base
+- **📊 Visual Indicator**: Visual confidence system (traffic light)
 
-## 🛠️ **Tecnologías Utilizadas**
+## 🛠️ **Technologies Used**
 
-- **Frontend**: React.js con hooks modernos
+- **Frontend**: React.js with modern hooks
 - **Backend**: Node.js + Express.js
-- **IA**: Google Gemini AI (Gemini 1.5 Flash)
-- **Almacenamiento**: In-memory (para prototipo)
-- **Manejo de archivos**: Multer
+- **AI**: Google Gemini AI (Gemini 1.5 Flash)
+- **Storage**: In-memory (for prototype)
+- **File handling**: Multer
 
-## 🔑 **Configuración de Google Gemini AI**
+## 🔑 **Google Gemini AI Configuration**
 
-### **1. Obtener API Key:**
-1. Ve a [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Inicia sesión con tu cuenta de Google
-3. Haz clic en "Create API Key"
-4. Copia la API key generada
+### **1. Get API Key:**
+1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Sign in with your Google account
+3. Click "Create API Key"
+4. Copy the generated API key
 
-### **2. Configurar la API Key:**
-1. **Opción A**: Copia `server/config.example.js` a `server/config.js`:
+### **2. Configure the API Key:**
+1. **Option A**: Copy `server/config.example.js` to `server/config.js`:
    ```bash
    cp server/config.example.js server/config.js
    ```
 
-2. **Opción B**: Crea manualmente `server/config.js`:
+2. **Option B**: Manually create `server/config.js`:
    ```javascript
    const config = {
-     googleGeminiApiKey: 'TU_API_KEY_AQUI',
+     googleGeminiApiKey: 'YOUR_API_KEY_HERE',
      port: 5000,
      nodeEnv: 'development'
    };
    module.exports = config;
    ```
 
-3. Reemplaza `'TU_API_KEY_AQUI'` con tu API key real
+3. Replace `'YOUR_API_KEY_HERE'` with your real API key
 
-## 📦 **Instalación y Ejecución**
+## 📦 **Installation and Execution**
 
-### **Requisitos previos:**
-- Node.js (versión 16 o superior)
-- npm o yarn
+### **Prerequisites:**
+- Node.js (version 16 or higher)
+- npm or yarn
 
-### **Instalación paso a paso:**
+### **Step-by-step installation:**
 
 ```bash
-# 1. Clonar el repositorio (reemplaza con tu URL real)
-git clone <URL-DE-TU-REPOSITORIO>
-cd <nombre-del-proyecto>
+# 1. Clone the repository (replace with your real URL)
+git clone <YOUR-REPOSITORY-URL>
+cd <project-name>
 
-# 2. Instalar dependencias del root (concurrently)
+# 2. Install root dependencies (concurrently)
 npm install
 
-# 3. Instalar dependencias del frontend
+# 3. Install frontend dependencies
 cd client
 npm install
 
-# 4. Instalar dependencias del backend
+# 4. Install backend dependencies
 cd ../server
 npm install
 
-# 5. Volver al directorio raíz
+# 5. Return to root directory
 cd ..
 ```
 
-### **Ejecución:**
+### **Execution:**
 
 ```bash
-# Ejecutar frontend y backend simultáneamente (recomendado)
+# Run frontend and backend simultaneously (recommended)
 npm run dev
 
-# O ejecutar por separado:
-npm run start-client  # Frontend en http://localhost:5010
-npm run start-server  # Backend en http://localhost:5000
+# Or run separately:
+npm run start-client  # Frontend at http://localhost:5010
+npm run start-server  # Backend at http://localhost:5000
 ```
 
-### **Verificar que funciona:**
-- **Frontend**: Abre http://localhost:5010 en tu navegador
-- **Backend**: Deberías ver "Server listening at http://localhost:5000" en la terminal
+### **Verify it works:**
+- **Frontend**: Open http://localhost:5010 in your browser
+- **Backend**: You should see "Server listening at http://localhost:5000" in the terminal
 
-## 🎯 **Cómo Usar el Sistema**
+## 🎯 **How to Use the System**
 
-### **1. Cargar Documentos:**
-- Arrastra y suelta archivos en la zona de carga
-- O haz clic para seleccionar archivos manualmente
-- Soporta archivos de texto (.txt), PDFs, y otros formatos
+### **1. Upload Documents:**
+- Drag and drop files into the upload area
+- Or click to manually select files
+- Supports text files (.txt), PDFs, and other formats
 
-### **2. Buscar Información:**
-- Escribe tu pregunta en lenguaje natural
-- El sistema buscará en todos los documentos cargados
-- Los resultados se muestran en tiempo real
+### **2. Search Information:**
+- Type your query in natural language
+- The system will search across all uploaded documents
+- Results are displayed in real-time
 
-### **3. Obtener Respuestas de IA:**
-- Haz preguntas específicas sobre el contenido
-- Google Gemini analizará los documentos y generará respuestas
-- El sistema evaluará la completitud de cada respuesta
+### **3. Get AI Answers:**
+- Ask specific questions about the content
+- Google Gemini will analyze the documents and generate answers
+- The system will evaluate the completeness of each answer
 
-### **4. Enriquecer la Base de Conocimiento:**
-- Revisa las sugerencias de enriquecimiento
-- Sube documentos adicionales según las recomendaciones
-- Mejora la calidad de las respuestas futuras
+### **4. Enrich the Knowledge Base:**
+- Review enrichment suggestions
+- Upload additional documents based on recommendations
+- Improve the quality of future answers
 
-## 🏗️ **Arquitectura del Sistema**
+## 🏗️ **System Architecture**
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -122,119 +122,119 @@ npm run start-server  # Backend en http://localhost:5000
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
-## 🔍 **Endpoints de la API**
+## 🔍 **API Endpoints**
 
-- `POST /upload` - Cargar documentos
-- `GET /search?q=<query>` - Buscar en documentos
-- `POST /answer` - Generar respuesta de IA
+- `POST /upload` - Upload documents
+- `GET /search?q=<query>` - Search in documents
+- `POST /answer` - Generate AI answer
 
-## 🎨 **Características de la UI/UX**
+## 🎨 **UI/UX Features**
 
-- **Diseño Responsivo**: Funciona en dispositivos móviles y desktop
-- **Drag & Drop**: Carga intuitiva de archivos
-- **Búsqueda Instantánea**: Resultados en tiempo real
-- **Indicador Visual**: Sistema de semáforo para confianza
-- **Interfaz Limpia**: Diseño moderno y profesional
+- **Responsive Design**: Works on mobile and desktop devices
+- **Drag & Drop**: Intuitive file upload
+- **Instant Search**: Real-time results
+- **Visual Indicator**: Traffic light system for confidence
+- **Clean Interface**: Modern and professional design
 
-## 🚧 **Limitaciones del Prototipo**
+## 🚧 **Prototype Limitations**
 
-- **Almacenamiento**: Los documentos se almacenan en memoria (se pierden al reiniciar)
-- **Formato de archivos**: Soporte básico para texto y PDFs
-- **Escalabilidad**: Diseñado para demostración, no para producción masiva
-- **Seguridad**: Sin autenticación de usuarios implementada
+- **Storage**: Documents are stored in memory (lost on restart)
+- **File formats**: Basic support for text and PDFs
+- **Scalability**: Designed for demonstration, not massive production
+- **Security**: No user authentication implemented
 
-## 🔮 **Mejoras Futuras**
+## 🔮 **Future Improvements**
 
-- [ ] Base de datos persistente (MongoDB/PostgreSQL)
-- [ ] Autenticación de usuarios
-- [ ] Soporte para más formatos de archivo
-- [ ] Cache de respuestas de IA
-- [ ] Análisis de documentos más avanzado
+- [ ] Persistent database (MongoDB/PostgreSQL)
+- [ ] User authentication
+- [ ] Support for more file formats
+- [ ] AI response caching
+- [ ] More advanced document analysis
 - [ ] API rate limiting
-- [ ] Logs y monitoreo
+- [ ] Logs and monitoring
 
-## 📝 **Decisiones de Diseño**
+## 📝 **Design Decisions**
 
-### **IA Model Selection:**
-- **Google Gemini 1.5 Flash**: Elegido por su velocidad, precisión y soporte para español
-- **Análisis de Completitud**: Implementado usando el mismo modelo para consistencia
-- **Sugerencias de Enriquecimiento**: Generadas dinámicamente basadas en el contexto
+### **AI Model Selection:**
+- **Google Gemini 1.5 Flash**: Chosen for its speed, accuracy, and Spanish support
+- **Completeness Analysis**: Implemented using the same model for consistency
+- **Enrichment Suggestions**: Generated dynamically based on context
 
-### **Arquitectura:**
-- **Separación Frontend/Backend**: Para escalabilidad y mantenimiento
-- **API RESTful**: Interfaz clara y estándar
-- **Manejo de Errores**: Respuestas informativas para debugging
+### **Architecture:**
+- **Frontend/Backend Separation**: For scalability and maintenance
+- **RESTful API**: Clear and standard interface
+- **Error Handling**: Informative responses for debugging
 
-## ⚖️ **Trade-offs por Restricción de 10h**
+## ⚖️ **Trade-offs due to 10h Constraint**
 
-- **Almacenamiento en Memoria**: Rápido de implementar, pero no persistente
-- **Búsqueda Básica**: Implementación simple vs. motor de búsqueda avanzado
-- **Manejo de Errores**: Básico vs. sistema robusto de logging
-- **UI/UX**: Funcional vs. altamente pulido
-- **Testing**: Manual vs. suite de tests automatizados
+- **In-Memory Storage**: Quick to implement, but not persistent
+- **Basic Search**: Simple implementation vs. advanced search engine
+- **Error Handling**: Basic vs. robust logging system
+- **UI/UX**: Functional vs. highly polished
+- **Testing**: Manual vs. automated test suite
 
-## 🧪 **Cómo Probar el Sistema**
+## 🧪 **How to Test the System**
 
-### **Pruebas Básicas:**
-1. **Carga de Documentos:**
-   - Sube un archivo .txt con contenido simple
-   - Verifica que aparezca en la lista
+### **Basic Tests:**
+1. **Document Upload:**
+   - Upload a .txt file with simple content
+   - Verify it appears in the list
 
-2. **Búsqueda:**
-   - Escribe palabras que aparezcan en el documento
-   - Verifica que los resultados se muestren
+2. **Search:**
+   - Type words that appear in the document
+   - Verify that results are displayed
 
-3. **Respuestas de IA:**
-   - Haz una pregunta sobre el contenido del documento
-   - Verifica que Gemini genere una respuesta coherente
+3. **AI Responses:**
+   - Ask a question about the document content
+   - Verify that Gemini generates a coherent response
 
-4. **Verificación de Completitud:**
-   - Haz preguntas que requieran información no disponible
-   - Verifica que el sistema detecte respuestas incompletas
+4. **Completeness Verification:**
+   - Ask questions that require unavailable information
+   - Verify that the system detects incomplete answers
 
-### **Pruebas Avanzadas:**
-- Carga múltiples documentos relacionados
-- Haz preguntas que requieran información de varios archivos
-- Verifica las sugerencias de enriquecimiento
+### **Advanced Tests:**
+- Upload multiple related documents
+- Ask questions that require information from several files
+- Verify enrichment suggestions
 
-## 🐛 **Solución de Problemas**
+## 🐛 **Troubleshooting**
 
-### **Error de API Key:**
-- Verifica que hayas configurado `config.js` correctamente
-- Asegúrate de que la API key sea válida y tenga cuota disponible
-- Revisa que el archivo `server/config.js` exista y tenga el formato correcto
+### **API Key Error:**
+- Verify that you have configured `config.js` correctly
+- Make sure the API key is valid and has available quota
+- Check that the `server/config.js` file exists and has the correct format
 
-### **Dependencias no instaladas:**
-- Ejecuta `npm install` en cada directorio (root, client, server)
-- Verifica que Node.js esté en versión 16 o superior
-- Revisa que no haya errores durante la instalación
+### **Dependencies not installed:**
+- Run `npm install` in each directory (root, client, server)
+- Verify that Node.js is version 16 or higher
+- Check that there are no errors during installation
 
-### **Documentos no se cargan:**
-- Verifica que el servidor esté ejecutándose en el puerto 5000
-- Revisa la consola del navegador para errores
-- Asegúrate de que el directorio `server/uploads` exista
+### **Documents not uploading:**
+- Verify that the server is running on port 5000
+- Check the browser console for errors
+- Make sure the `server/uploads` directory exists
 
-### **Respuestas de IA lentas:**
-- Google Gemini puede tardar 2-5 segundos en responder
-- Verifica tu conexión a internet
-- Revisa que tu API key tenga cuota disponible
+### **Slow AI responses:**
+- Google Gemini can take 2-5 seconds to respond
+- Verify your internet connection
+- Check that your API key has available quota
 
-### **Puertos ocupados:**
-- Si el puerto 5000 está ocupado, cambia el puerto en `server/config.js`
-- Si el puerto 5010 está ocupado, React automáticamente usará otro puerto
+### **Ports occupied:**
+- If port 5000 is occupied, change the port in `server/config.js`
+- If port 5010 is occupied, React will automatically use another port
 
-## 📞 **Soporte**
+## 📞 **Support**
 
-Para problemas técnicos o preguntas sobre la implementación:
-- Revisa los logs del servidor en la terminal
-- Verifica la consola del navegador
-- Asegúrate de que todas las dependencias estén instaladas
-- Verifica que la API key de Google Gemini esté configurada correctamente
+For technical issues or questions about the implementation:
+- Check the server logs in the terminal
+- Verify the browser console
+- Make sure all dependencies are installed
+- Verify that the Google Gemini API key is configured correctly
 
-## 📄 **Licencia**
+## 📄 **License**
 
-Este proyecto es un prototipo de demostración. Libre para uso educativo y de desarrollo.
+This project is a demonstration prototype. Free for educational and development use.
 
 ---
 
-**Desarrollado con ❤️ usando React, Node.js y Google Gemini AI**
+**Developed with ❤️ using React, Node.js and Google Gemini AI**
