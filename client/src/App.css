@@ -1,0 +1,137 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #282c34;
+  color: white;
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+  margin-bottom: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+  padding: 40px 20px;
+  gap: 20px; /* Spacing between sections */
+}
+
+h1, h2, h3 {
+  color: #61dafb;
+  margin-bottom: 10px;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+input[type="file"], input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #61dafb;
+  background-color: #3a3f47;
+  color: white;
+  margin-right: 10px;
+  width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61dafb;
+  color: #282c34;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #4fa3d1;
+}
+
+.drop-zone {
+  border: 2px dashed #61dafb;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  margin: 20px 0;
+  cursor: pointer;
+  width: 80%;
+  max-width: 500px;
+  color: #61dafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop-zone.highlight {
+  background-color: #20232a;
+}
+
+.search-results, .ai-answer {
+  background-color: #3a3f47;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 700px;
+  text-align: left;
+}
+
+.document-result {
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.document-result:last-child {
+  border-bottom: none;
+}
+
+.App-link {
+  color: #61dafb;
+  margin-top: 20px;
+}
+
+.confidence-indicator {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.confidence-high {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.confidence-medium {
+  background-color: #FFC107; /* Amber */
+  color: black;
+}
+
+.confidence-low {
+  background-color: #F44336; /* Red */
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
